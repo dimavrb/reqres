@@ -42,13 +42,8 @@ gradle clean test
 
 ![](https://github.com/dimavrb/tochka/blob/main/media/screenshots/Jenkins.png)
 
-## Параметры сборки в Jenkins:
-- browser (браузер, по умолчанию chrome)
-- browserVersion (версия браузера, по умолчанию 100.0)
-- browserSize (размер окна браузера, по умолчанию 1920x1080)
-
 ## Команда для запуска из терминала
-`gradle clean test -Denv=remote`
+`gradle clean test`
 
 <a id="allure"></a>
 ## Allure Report 
