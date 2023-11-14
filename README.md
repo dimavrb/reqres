@@ -54,14 +54,19 @@ gradle clean test
 ## Allure Report 
 
 ### Главная страница отчета
-![](https://github.com/dimavrb/tochka/blob/main/media/screenshots/AllureReport.png)
+![](https://github.com/dimavrb/tochka/blob/main/media/screenshots/AllureMainPage.png)
 
 ### Страница с тест-кейсами
 
-![](https://github.com/dimavrb/tochka/blob/main/media/screenshots/Тест-кейс.png)
+![](https://github.com/dimavrb/tochka/blob/main/media/screenshots/ChecksList.png)
+
+### Информация о кейсах
+
+![](https://github.com/dimavrb/tochka/blob/main/media/screenshots/InfoAboutCase.png)
+
 
 <a id="telegram"></a>
 ## Уведомление в Telegram
 
-![](https://github.com/dimavrb/tochka/blob/main/media/screenshots/telegram.png)
+![](https://github.com/dimavrb/tochka/blob/main/media/screenshots/Telegram.png)
 
