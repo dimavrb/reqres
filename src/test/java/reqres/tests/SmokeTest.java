@@ -14,6 +14,9 @@ import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static reqres.specs.LoginSpec.loginRequestSpec;
 
+
+@DisplayName("Проверка авторизации и регистрации пользователя")
+
 public class SmokeTest {
 
     @Test
