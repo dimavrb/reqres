@@ -1,6 +1,8 @@
 package reqres.tests;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.restassured.AllureRestAssured;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import reqres.models.LoginBodyModel;
 import reqres.models.LoginResponseErrorModel;
@@ -15,6 +17,8 @@ import static reqres.specs.LoginSpec.loginRequestSpec;
 public class SmokeTest {
 
     @Test
+    @DisplayName("Успешная авторизация")
+    @Description("Проверить, что авторизация с валидными данными, выполняется успешно")
     void successfulLogin() {
         LoginBodyModel rqData = new LoginBodyModel();
         String validLogin = "eve.holt@reqres.in";
@@ -35,6 +39,8 @@ public class SmokeTest {
     }
 
     @Test
+    @DisplayName("Авторизация без указания пароля")
+    @Description("Проверить, что авторизация без указания password завершается с ошибкой")
     void unsuccessfulLogin() {
         LoginBodyModel rqData = new LoginBodyModel();
         rqData.setEmail("eve.holt@reqres.in");
@@ -48,6 +54,8 @@ public class SmokeTest {
 
 
     @Test
+    @DisplayName("Регистрация пользователя с валидными данными")
+    @Description("Проверить, что регистрация с валидными данными, завершается успешно. В ответе приходит токен пользователя")
     void successfulRegister() {
         LoginBodyModel rqData = new LoginBodyModel();
         rqData.setEmail("eve.holt@reqres.in");
@@ -64,6 +72,8 @@ public class SmokeTest {
 
 
     @Test
+    @DisplayName("Регистрация пользователя без указания пароля")
+    @Description("Проверить, что регистрация, без указания пароля, завершается ошибкой")
     void unsuccessfulRegisterWithoutPassword() {
         LoginBodyModel rqData = new LoginBodyModel();
         rqData.setEmail("sydney@fife");
@@ -81,6 +91,8 @@ public class SmokeTest {
     }
 
     @Test
+    @DisplayName("Регистрация без указания логина")
+    @Description("Проверить, что регистарция без указания логина, завершается ошибкой")
     void unsuccessfulRegisterWithoutLogin() {
         LoginBodyModel rqData = new LoginBodyModel();
         rqData.setPassword("sydney");
