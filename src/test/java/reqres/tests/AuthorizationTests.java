@@ -17,7 +17,7 @@ import static reqres.specs.LoginSpec.loginRequestSpec;
 
 @DisplayName("Проверка авторизации и регистрации пользователя")
 
-public class SmokeTest {
+public class AuthorizationTests {
 
     @Test
     @DisplayName("Успешная авторизация")
