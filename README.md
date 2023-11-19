@@ -16,10 +16,10 @@
 
 <a id="tools"></a>
 ## Технологии и инструменты
-| Java  | IDEA | Github | JUnit 5 | Gradle | RestAssured | | Allure | Jenkins |
-| ----- | ---- | ------ | ------- | ------ | -------- | -------- | ------ |
-|[![](https://github.com/dimavrb/tochka/blob/main/media/logo/Java.svg)](java.com) | ![](https://github.com/dimavrb/tochka/blob/main/media/logo/Idea.svg) | ![](https://github.com/dimavrb/tochka/blob/main/media/logo/GitHub.svg) | ![](https://github.com/dimavrb/tochka/blob/main/media/logo/Junit5.svg)  | ![](https://github.com/dimavrb/tochka/blob/main/media/logo/Gradle.svg)  | ![](https://github.com/dimavrb/reqres/blob/b3aeb044acef65254ce38ab3b679f48d3d0d4fa9/media/logo/RestAssured.svg)  | ![](https://github.com/dimavrb/tochka/blob/main/media/logo/Allure.svg) | ![](https://github.com/dimavrb/tochka/blob/main/media/logo/Jenkins.svg)  |
 
+| Java  | IDEA | Github | JUnit 5 | Gradle | RestAssured | Allure | Jenkins |
+| ----- | ---- | ------ | ------- | ------ | -------- | ------ | ------- |
+|[![](https://github.com/dimavrb/tochka/blob/main/media/logo/Java.svg)](java.com) | ![](https://github.com/dimavrb/tochka/blob/main/media/logo/Idea.svg) | ![](https://github.com/dimavrb/tochka/blob/main/media/logo/GitHub.svg) | ![](https://github.com/dimavrb/tochka/blob/main/media/logo/Junit5.svg)  | ![](https://github.com/dimavrb/tochka/blob/main/media/logo/Gradle.svg)  | ![](https://github.com/dimavrb/reqres/blob/main/media/logo/RestAssured.svg)  | ![](https://github.com/dimavrb/tochka/blob/main/media/logo/Allure.svg) | ![](https://github.com/dimavrb/tochka/blob/main/media/logo/Jenkins.svg)  |
 
 <a id="cases"></a>
 ## :heavy_check_mark: Реализованные проверки
