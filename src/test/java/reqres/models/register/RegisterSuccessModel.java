@@ -1,4 +1,4 @@
-package reqres.models;
+package reqres.models.register;
 
 import lombok.Data;
 

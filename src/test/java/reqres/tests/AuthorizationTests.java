@@ -4,10 +4,10 @@ import io.qameta.allure.Description;
 import io.qameta.allure.restassured.AllureRestAssured;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import reqres.models.LoginBodyModel;
-import reqres.models.LoginResponseErrorModel;
-import reqres.models.LoginResponseModel;
-import reqres.models.RegisterSuccessModel;
+import reqres.models.login.LoginRequestModel;
+import reqres.models.login.LoginResponseErrorModel;
+import reqres.models.login.LoginResponseModel;
+import reqres.models.register.RegisterSuccessModel;
 
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
@@ -23,7 +23,7 @@ public class AuthorizationTests {
     @DisplayName("Успешная авторизация")
     @Description("Проверить, что авторизация с валидными данными, выполняется успешно")
     void successfulLogin() {
-        LoginBodyModel rqData = new LoginBodyModel();
+        LoginRequestModel rqData = new LoginRequestModel();
         String validLogin = "eve.holt@reqres.in";
         String validPassword = "cityslicka";
         rqData.setEmail(validLogin);
@@ -45,7 +45,7 @@ public class AuthorizationTests {
     @DisplayName("Авторизация без указания пароля")
     @Description("Проверить, что авторизация без указания password завершается с ошибкой")
     void unsuccessfulLogin() {
-        LoginBodyModel rqData = new LoginBodyModel();
+        LoginRequestModel rqData = new LoginRequestModel();
         rqData.setEmail("eve.holt@reqres.in");
         LoginResponseErrorModel response = step("Send login request", () -> given(loginRequestSpec)
                 .post("/login")
@@ -60,7 +60,7 @@ public class AuthorizationTests {
     @DisplayName("Регистрация пользователя с валидными данными")
     @Description("Проверить, что регистрация с валидными данными, завершается успешно. В ответе приходит токен пользователя")
     void successfulRegister() {
-        LoginBodyModel rqData = new LoginBodyModel();
+        LoginRequestModel rqData = new LoginRequestModel();
         rqData.setEmail("eve.holt@reqres.in");
         rqData.setPassword("pistol");
         RegisterSuccessModel response = step("Send login request", () -> given(loginRequestSpec)
@@ -78,7 +78,7 @@ public class AuthorizationTests {
     @DisplayName("Регистрация пользователя без указания пароля")
     @Description("Проверить, что регистрация, без указания пароля, завершается ошибкой")
     void unsuccessfulRegisterWithoutPassword() {
-        LoginBodyModel rqData = new LoginBodyModel();
+        LoginRequestModel rqData = new LoginRequestModel();
         rqData.setEmail("sydney@fife");
         LoginResponseErrorModel response = step("Send login request", () -> given(loginRequestSpec)
                 .log().all().when()
@@ -97,7 +97,7 @@ public class AuthorizationTests {
     @DisplayName("Регистрация без указания логина")
     @Description("Проверить, что регистарция без указания логина, завершается ошибкой")
     void unsuccessfulRegisterWithoutLogin() {
-        LoginBodyModel rqData = new LoginBodyModel();
+        LoginRequestModel rqData = new LoginRequestModel();
         rqData.setPassword("sydney");
         LoginResponseErrorModel response = step("Send login request", () -> given(loginRequestSpec)
                 .log().all().when()
